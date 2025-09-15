@@ -6,10 +6,16 @@ import java.util.StringTokenizer;
 class LL1{
     public static void main(String[] args){
 
-        //This is the input, saved as "string"
-        Scanner input = new Scanner(System.in);
-        String string = input.nextLine();
-        input.close();
+        String string;
+        if(args.length > 0){
+            string = args [0];
+        }
+        else{
+            //This is the input, saved as "string"
+            Scanner input = new Scanner(System.in);
+            string = input.nextLine();
+            input.close();
+        }
 
         //String is converted to tokens
         String exp = string+"$";
